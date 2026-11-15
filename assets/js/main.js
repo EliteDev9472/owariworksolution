@@ -72,15 +72,6 @@
     window.addEventListener("resize", queueActive);
   }
 
-  /* Open a principle when the page is linked to it, e.g. #quality */
-  var openFromHash = function () {
-    var id = window.location.hash.slice(1);
-    var el = id && document.getElementById(id);
-    if (el && el.tagName === "DETAILS") el.open = true;
-  };
-  openFromHash();
-  window.addEventListener("hashchange", openFromHash);
-
   /* Reveal sections as they scroll into view */
   var revealed = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window) {
